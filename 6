@@ -1,0 +1,17 @@
+solutions = []
+
+for hod in range(100, 1000):
+    mat = 3 * hod
+    if mat >= 1000:
+        break
+
+    str_hod = str(hod)
+    str_mat = str(mat)
+
+    all_chars = str_hod + str_mat
+
+    if len(set(all_chars)) == 6:
+        solutions.append(f"{hod}+{hod}+{hod}={mat}")
+
+for s in solutions:
+    print(s)
