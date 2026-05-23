@@ -1,0 +1,11 @@
+n = int(input())
+
+numbers = set(range(2, n))
+
+# Решето Эратосфена
+for i in range(2, int(n ** 0.5) + 1):
+    if i in numbers:
+        for multiple in range(i * i, n, i):
+            numbers.discard(multiple)
+
+print(numbers)
