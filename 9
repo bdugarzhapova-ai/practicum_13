@@ -1,0 +1,10 @@
+from itertools import combinations
+
+numbers = input().split()
+
+k = int(input())
+
+k_subsets = combinations(numbers, k)
+
+for subset in k_subsets:
+    print(' '.join(subset))
