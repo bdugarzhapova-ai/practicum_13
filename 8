@@ -1,0 +1,12 @@
+from itertools import combinations
+
+numbers = input().split()
+
+subsets = []
+
+for r in range(len(numbers) + 1):
+    for combo in combinations(numbers, r):
+        subsets.append(combo)
+
+for subset in subsets:
+    print(' '.join(subset))
