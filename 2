@@ -1,0 +1,13 @@
+n = int(input())
+common_courses = None
+
+for i in range(n):
+    courses_line = input().strip().split()
+    student_courses = set(courses_line)
+
+    if common_courses is None:
+        common_courses = student_courses
+    else:
+        common_courses.intersection_update(student_courses)
+
+print(len(common_courses))
