@@ -1,0 +1,8 @@
+sladkoeshkin = set(input().split())
+n = int(input())
+
+friends = set()
+for _ in range(n):
+    friends |= set(input().split())
+
+print(len(sladkoeshkin - friends))
