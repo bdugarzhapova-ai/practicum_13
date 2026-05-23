@@ -1,0 +1,17 @@
+first_str = input().split()
+second_str = input().strip()
+
+seen = set()
+duplicates = set()
+
+for num in first_str:
+    if num in seen:
+        duplicates.add(num)
+    else:
+        seen.add(num)
+
+if second_str in duplicates:
+    print("Yes")
+else:
+    print("No")
+    
